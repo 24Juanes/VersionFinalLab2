@@ -32,15 +32,17 @@ public class MainActivity extends AppCompatActivity {
         if (id == R.id.mMenu) {
             Intent intent= new Intent (MainActivity.this,PerfilActivity.class);
             startActivity(intent);
-
-
         }else{
             onBackPressed();
-
         }
+
+
+
+
 
 
         return super.onOptionsItemSelected(item);
 
     }
+
 }

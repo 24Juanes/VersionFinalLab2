@@ -29,7 +29,7 @@ public class LoginActivity extends AppCompatActivity {
     }
 
     public void LoginClicked(View view) {
-        if (eCorreo.getText().toString().equals(correo)|| ePassword.getText().toString().equals(password)) {
+        if (eCorreo.getText().toString().equals(correo) && ePassword.getText().toString().equals(password)) {
             Toast.makeText(this, "Bienvenido", Toast.LENGTH_SHORT).show();
             Intent i= new Intent(LoginActivity.this, MainActivity.class);
             i.putExtra("correo",correo );
@@ -44,5 +44,6 @@ public class LoginActivity extends AppCompatActivity {
     public void RegistrarseClicked(View view) {
         Intent i= new Intent(LoginActivity.this, RegistroActivity.class);
         startActivityForResult(i, 1234);
+
     }
 }

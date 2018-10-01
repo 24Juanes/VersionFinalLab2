@@ -9,16 +9,16 @@ import android.widget.TextView;
 
 public class PerfilActivity extends AppCompatActivity {
     private TextView tEmail;
+    private String correo,password;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_perfil);
-
-        tEmail= findViewById(R.id.tEmail);
-        Bundle args=getIntent().getExtras();
-        if (args!=null){
-        tEmail.setText(args.getString("correo"));
+        Bundle args = getIntent().getExtras();
+        if (args != null) {
+            correo = args.getString("correo");
+            password = args.getString("password");
         }
 
 
@@ -38,6 +38,7 @@ public class PerfilActivity extends AppCompatActivity {
         if (id == R.id.mCerrar) {
             Intent intent= new Intent (PerfilActivity.this,LoginActivity.class);
             startActivity(intent);
+
 
 
         }else{
